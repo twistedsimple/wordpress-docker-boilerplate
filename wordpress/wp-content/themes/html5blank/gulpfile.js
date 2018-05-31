@@ -2,6 +2,9 @@
 /* global $: true */
 "use strict";
 
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
+
 var gulp = require( "gulp" ),
 	/** @type {Object} Loader of Gulp plugins from `package.json` */
 	$ = require( "gulp-load-plugins" )(),
@@ -14,7 +17,7 @@ var gulp = require( "gulp" ),
 		/** jQuery */
 		"node_modules/jquery/dist/jquery.js",
 		/** Page scripts */
-		"src/js/scripts.js"
+		"src/js/dist/scripts.js"
 	],
 	/** @type {Object of Array} CSS source files to concatenate and minify */
 	cssminSrc = {
@@ -22,7 +25,7 @@ var gulp = require( "gulp" ),
 			/** The banner of `style.css` */
 			"src/css/banner.css",
 			/** Theme style */
-			"src/css/style.css"
+			//"src/css/style.css"
 		],
 		production: [
 			/** The banner of `style.css` */
@@ -75,6 +78,7 @@ gulp.task( "sass", function () {
 	return gulp.src( "src/css/sass/style.scss" )
 		.pipe( $.sourcemaps.init() )
 		.pipe( $.sass() )
+		.pipe( $.autoprefixer( "last 2 version" ) )
 		.pipe( $.sourcemaps.write( "." ) )
 		.on( "error", function( e ) {
 			console.error( e );
@@ -87,8 +91,7 @@ gulp.task( "styles", [ "sass" ], function() {
 	console.log( "`styles` task run in `" + env + "` environment" );
 
 	var stream = gulp.src( cssminSrc[ env ] )
-		.pipe( $.concat( "style.css" ))
-		.pipe( $.autoprefixer( "last 2 version" ) );
+		.pipe( $.concat( "style.css" ));
 
 	if ( env === "production" ) {
 		stream = stream.pipe( $.csso() );
@@ -103,10 +106,22 @@ gulp.task( "styles", [ "sass" ], function() {
 /** JSHint */
 gulp.task( "jshint", function () {
 	/** Test all `js` files exclude those in the `lib` folder */
-	return gulp.src( "src/js/{!(lib)/*.js,*.js}" )
+	return gulp.src( ["src/js/*.js", "!src/js/lib/*.js", "!src/js/dist/*.js" ])
 		.pipe( $.jshint() )
 		.pipe( $.jshint.reporter( "jshint-stylish" ) )
 		.pipe( $.jshint.reporter( "fail" ) );
+});
+
+/** Webpack */
+gulp.task('webpack', () => {
+	gulp.src('./src/js/scripts.js')
+		.pipe(webpackStream({
+			output: {
+				filename: 'scripts.js',
+			},
+			devtool: 'source-map'
+		}))
+		.pipe(gulp.dest('./src/js/dist'));
 });
 
 /** Templates */
@@ -179,7 +194,7 @@ gulp.task( "watch", [ "template", "styles", "jshint", "modernizr", "jquery", "no
 	], [ "styles" ] );
 
 	/** Watch for JSHint */
-	gulp.watch( "src/js/{!(lib)/*.js,*.js}", ["jshint"] );
+	gulp.watch( "src/js/{!(lib)/*.js,*.js}", ["jshint", "webpack"] );
 });
 
 /** Build */

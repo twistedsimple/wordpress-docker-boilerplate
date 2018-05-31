@@ -1,6 +1,6 @@
 /*!
- * modernizr v3.5.0
- * Build https://modernizr.com/download?-MessageChannel-adownload-ambientlight-animation-apng-appearance-applicationcache-audio-audioloop-audiopreload-backdropfilter-backgroundblendmode-backgroundcliptext-backgroundsize-batteryapi-bdi-beacon-bgpositionshorthand-bgpositionxy-bgrepeatspace_bgrepeatround-bgsizecover-blobconstructor-bloburls-blobworkers-borderimage-borderradius-boxshadow-boxsizing-canvas-canvasblending-canvastext-canvaswinding-capture-checked-classlist-contains-contenteditable-contextmenu-cookies-cors-createelementattrs_createelement_attrs-cryptography-cssall-cssanimations-csscalc-csschunit-csscolumns-cssescape-cssexunit-cssfilters-cssgradients-cssgrid_cssgridlegacy-csshyphens_softhyphens_softhyphensfind-cssinvalid-cssmask-csspointerevents-csspositionsticky-csspseudoanimations-csspseudotransitions-cssreflections-cssremunit-cssresize-cssscrollbar-csstransforms-csstransforms3d-csstransformslevel2-csstransitions-cssvalid-cssvhunit-cssvmaxunit-cssvminunit-cssvwunit-cubicbezierrange-customelements-customevent-customprotocolhandler-dart-datachannel-datalistelem-dataset-datauri-dataview-dataworkers-details-devicemotion_deviceorientation-directory-display_runin-displaytable-documentfragment-ellipsis-emoji-es5-es5array-es5date-es5function-es5object-es5string-es5syntax-es5undefined-es6array-es6collections-es6math-es6number-es6object-es6string-eventlistener-eventsource-exiforientation-fetch-fileinput-filereader-filesystem-flash-flexbox-flexboxlegacy-flexboxtweener-flexwrap-fontface-formattribute-formvalidation-framed-fullscreen-gamepads-generatedcontent-generators-geolocation-getrandomvalues-getusermedia-hairline-hashchange-hidden-hiddenscroll-history-hovermq-hsla-htmlimports-ie8compat-imgcrossorigin-indexeddb-indexeddbblob-inlinesvg-input-inputformaction-inputformenctype-inputformmethod-inputformtarget-inputtypes-intl-jpeg2000-jpegxr-json-lastchild-ligatures-localizednumber-localstorage-lowbandwidth-lowbattery-mathml-mediaqueries-microdata-multiplebgs-mutationobserver-notification-nthchild-objectfit-olreversed-oninput-opacity-outputelem-overflowscrolling-pagevisibility-passiveeventlisteners-peerconnection-performance-picture-placeholder-pointerevents-pointerlock-pointermq-postmessage-preserve3d-progressbar_meter-promises-proximity-queryselector-quotamanagement-regions-requestanimationframe-requestautocomplete-rgba-ruby-sandbox-scriptasync-scriptdefer-scrollsnappoints-seamless-search-serviceworker-sessionstorage-shapes-sharedworkers-siblinggeneral-sizes-smil-speechrecognition-speechsynthesis-srcdoc-srcset-strictmode-stylescoped-subpixelfont-supports-svg-svgasimg-svgclippaths-svgfilters-svgforeignobject-target-template-templatestrings-textalignlast-textareamaxlength-textshadow-texttrackapi_track-time-todataurljpeg_todataurlpng_todataurlwebp-touchevents-transferables-typedarrays-unicode-unicoderange-unknownelements-urlparser-urlsearchparams-userdata-userselect-vibrate-video-videoautoplay-videocrossorigin-videoloop-videopreload-vml-webaudio-webgl-webglextensions-webintents-webp-webpalpha-webpanimation-webplossless_webp_lossless-websockets-websocketsbinary-websqldatabase-webworkers-willchange-wrapflow-xdomainrequest-xhr2-xhrresponsetype-xhrresponsetypearraybuffer-xhrresponsetypeblob-xhrresponsetypedocument-xhrresponsetypejson-xhrresponsetypetext-addtest-atrule-domprefixes-hasevent-load-mq-prefixed-prefixedcss-prefixes-printshiv-setclasses-testallprops-testprop-teststyles-dontmin
+ * modernizr v3.6.0
+ * Build https://modernizr.com/download?-MessageChannel-adownload-ambientlight-animation-apng-appearance-applicationcache-audio-audioloop-audiopreload-backdropfilter-backgroundblendmode-backgroundcliptext-backgroundsize-batteryapi-bdi-beacon-bgpositionshorthand-bgpositionxy-bgrepeatspace_bgrepeatround-bgsizecover-blobconstructor-bloburls-blobworkers-borderimage-borderradius-boxshadow-boxsizing-canvas-canvasblending-canvastext-canvaswinding-capture-checked-classlist-contains-contenteditable-contextmenu-cookies-cors-createelementattrs_createelement_attrs-cryptography-cssall-cssanimations-csscalc-csschunit-csscolumns-cssescape-cssexunit-cssfilters-cssgradients-cssgrid_cssgridlegacy-csshyphens_softhyphens_softhyphensfind-cssinvalid-cssmask-csspointerevents-csspositionsticky-csspseudoanimations-csspseudotransitions-cssreflections-cssremunit-cssresize-cssscrollbar-csstransforms-csstransforms3d-csstransformslevel2-csstransitions-cssvalid-cssvhunit-cssvmaxunit-cssvminunit-cssvwunit-cubicbezierrange-customelements-customevent-customprotocolhandler-dart-datachannel-datalistelem-dataset-datauri-dataview-dataworkers-details-devicemotion_deviceorientation-directory-display_runin-displaytable-documentfragment-ellipsis-emoji-es5-es5array-es5date-es5function-es5object-es5string-es5syntax-es5undefined-es6array-es6collections-es6math-es6number-es6object-es6string-eventlistener-eventsource-exiforientation-fetch-fileinput-filereader-filesystem-flash-flexbox-flexboxlegacy-flexboxtweener-flexwrap-fontface-formattribute-formvalidation-framed-fullscreen-gamepads-generatedcontent-generators-geolocation-getrandomvalues-getusermedia-hairline-hashchange-hidden-hiddenscroll-history-hovermq-hsla-htmlimports-ie8compat-imgcrossorigin-indexeddb-indexeddbblob-inlinesvg-input-inputformaction-inputformenctype-inputformmethod-inputformtarget-inputtypes-intl-jpeg2000-jpegxr-json-lastchild-ligatures-localizednumber-localstorage-lowbandwidth-lowbattery-mathml-mediaqueries-microdata-multiplebgs-mutationobserver-notification-nthchild-objectfit-olreversed-oninput-opacity-outputelem-overflowscrolling-pagevisibility-passiveeventlisteners-peerconnection-performance-picture-placeholder-pointerevents-pointerlock-pointermq-postmessage-preserve3d-progressbar_meter-promises-proximity-queryselector-quotamanagement-regions-requestanimationframe-requestautocomplete-rgba-ruby-sandbox-scriptasync-scriptdefer-scrollsnappoints-seamless-search-serviceworker-sessionstorage-shapes-sharedworkers-siblinggeneral-sizes-smil-speechrecognition-speechsynthesis-srcdoc-srcset-strictmode-stylescoped-subpixelfont-supports-svg-svgasimg-svgclippaths-svgfilters-svgforeignobject-target-template-templatestrings-textalignlast-textareamaxlength-textshadow-texttrackapi_track-time-todataurljpeg_todataurlpng_todataurlwebp-touchevents-transferables-typedarrays-unicode-unicoderange-unknownelements-urlparser-urlsearchparams-userdata-userselect-variablefonts-vibrate-video-videoautoplay-videocrossorigin-videoloop-videopreload-vml-webaudio-webgl-webglextensions-webintents-webp-webpalpha-webpanimation-webplossless_webp_lossless-websockets-websocketsbinary-websqldatabase-webworkers-willchange-wrapflow-xdomainrequest-xhr2-xhrresponsetype-xhrresponsetypearraybuffer-xhrresponsetypeblob-xhrresponsetypedocument-xhrresponsetypejson-xhrresponsetypetext-addtest-atrule-domprefixes-hasevent-load-mq-prefixed-prefixedcss-prefixes-printshiv-setclasses-testallprops-testprop-teststyles-dontmin
  *
  * Copyright (c)
  *  Faruk Ates
@@ -36,7 +36,7 @@
 
   var ModernizrProto = {
     // The current version, dummy
-    _version: '3.5.0',
+    _version: '3.6.0',
 
     // Any settings that don't work as separate modules
     // can go in here as configuration.
@@ -2228,7 +2228,11 @@ Detects if audio can be downloaded in the background before it starts playing in
       var result = event !== undefined && event.type === 'loadeddata' ? true : false; //need to check if event is not undefined here in case function is evoked from timeout (no parameters)
       elem.removeEventListener('loadeddata', testpreload, false);
       addTest('audiopreload', result);
-      elem.parentNode.removeChild(elem);
+      // Cleanup, but don't assume elem is still in the page -
+      // an extension (eg Flashblock) may already have removed it.
+      if (elem.parentNode) {
+        elem.parentNode.removeChild(elem);
+      }
     }
 
     //skip the test if audio itself, or the preload
@@ -2686,7 +2690,7 @@ Detects support for the cryptographic functionality available under window.crypt
 }
 !*/
 /* DOC
-Detects support for the window.crypto.getRandomValues for generate cryptographically secure random numbers
+Detects support for the window.crypto.getRandomValues method for generating cryptographically secure random numbers
 */
 
   // In Safari <=5.0 `window.crypto` exists (for some reason) but is `undefined`, so we have to check
@@ -3549,7 +3553,7 @@ else {
   });
 
 /*! {
-  "name": "hairline",
+  "name": "CSS Hairline",
   "property": "hairline",
   "tags": ["css"],
   "authors": ["strarsis"],
@@ -4535,36 +4539,7 @@ Detects support for the ':target' CSS pseudo-class.
 !*/
 
   Modernizr.addTest('csstransforms3d', function() {
-    var ret = !!testAllProps('perspective', '1px', true);
-    var usePrefix = Modernizr._config.usePrefixes;
-
-    // Webkit's 3D transforms are passed off to the browser's own graphics renderer.
-    //   It works fine in Safari on Leopard and Snow Leopard, but not in Chrome in
-    //   some conditions. As a result, Webkit typically recognizes the syntax but
-    //   will sometimes throw a false positive, thus we must do a more thorough check:
-    if (ret && (!usePrefix || 'webkitPerspective' in docElement.style)) {
-      var mq;
-      var defaultStyle = '#modernizr{width:0;height:0}';
-      // Use CSS Conditional Rules if available
-      if (Modernizr.supports) {
-        mq = '@supports (perspective: 1px)';
-      } else {
-        // Otherwise, Webkit allows this media query to succeed only if the feature is enabled.
-        // `@media (transform-3d),(-webkit-transform-3d){ ... }`
-        mq = '@media (transform-3d)';
-        if (usePrefix) {
-          mq += ',(-webkit-transform-3d)';
-        }
-      }
-
-      mq += '{#modernizr{width:7px;height:18px;margin:0;padding:0;border:0}}';
-
-      testStyles(defaultStyle + mq, function(elem) {
-        ret = elem.offsetWidth === 7 && elem.offsetHeight === 18;
-      });
-    }
-
-    return ret;
+    return !!testAllProps('perspective', '1px', true);
   });
 
 /*!
@@ -4653,6 +4628,40 @@ Detects support for `transform-style: preserve-3d`, for getting a proper 3D pers
 
 /*!
 {
+  "name": "Variable Open Type Fonts",
+  "property": ["variablefonts"],
+  "authors": ["Patrick Kettner"],
+  "tags": ["css"],
+  "notes": [{
+    "name": "Variable fonts on the web",
+    "href": "https://webkit.org/blog/7051/variable-fonts-on-the-web/"
+  }, {
+    "name": "Variable fonts for responsive design",
+    "href": "https://alistapart.com/blog/post/variable-fonts-for-responsive-design"
+  }]
+}
+!*/
+
+  Modernizr.addTest('variablefonts', testAllProps('fontVariationSettings'));
+
+
+  /**
+   * roundedEquals takes two integers and checks if the first is within 1 of the second
+   *
+   * @access private
+   * @function roundedEquals
+   * @param {number} a
+   * @param {number} b
+   * @returns {boolean}
+   */
+
+  function roundedEquals(a, b) {
+    return a - 1 === b || a === b || a + 1 === b;
+  }
+
+  ;
+/*!
+{
   "name": "CSS vh unit",
   "property": "cssvhunit",
   "caniuse": "viewport-units",
@@ -4671,25 +4680,10 @@ Detects support for `transform-style: preserve-3d`, for getting a proper 3D pers
   testStyles('#modernizr { height: 50vh; }', function(elem) {
     var height = parseInt(window.innerHeight / 2, 10);
     var compStyle = parseInt(computedStyle(elem, null, 'height'), 10);
-    Modernizr.addTest('cssvhunit', compStyle == height);
+
+    Modernizr.addTest('cssvhunit', roundedEquals(compStyle, height));
   });
 
-
-  /**
-   * roundedEquals takes two integers and checks if the first is within 1 of the second
-   *
-   * @access private
-   * @function roundedEquals
-   * @param {number} a
-   * @param {number} b
-   * @returns {boolean}
-   */
-
-  function roundedEquals(a, b) {
-    return a - 1 === b || a === b || a + 1 === b;
-  }
-
-  ;
 /*!
 {
   "name": "CSS vmax unit",
@@ -4773,7 +4767,7 @@ Detects support for `transform-style: preserve-3d`, for getting a proper 3D pers
     var width = parseInt(window.innerWidth / 2, 10);
     var compStyle = parseInt(computedStyle(elem, null, 'width'), 10);
 
-    Modernizr.addTest('cssvwunit', compStyle == width);
+    Modernizr.addTest('cssvwunit', roundedEquals(compStyle, width));
   });
 
 /*!
@@ -8117,16 +8111,21 @@ Detects support for the Navigation Timing API, for measuring browser and connect
   "authors": ["Stu Cox"],
   "notes": [
     {
-      "name": "W3C spec",
+      "name": "W3C Pointer Events",
       "href": "https://www.w3.org/TR/pointerevents/"
-    }
-  ],
+    },{
+      "name": "W3C Pointer Events Level 2",
+      "href": "https://www.w3.org/TR/pointerevents2/"
+    },{
+    "name": "MDN documentation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent"
+  }],
   "warnings": ["This property name now refers to W3C DOM PointerEvents: https://github.com/Modernizr/Modernizr/issues/548#issuecomment-12812099"],
-  "polyfills": ["handjs","pep"]
+  "polyfills": ["pep"]
 }
 !*/
 /* DOC
-Detects support for the DOM Pointer Events API, which provides a unified event interface for pointing input devices, as implemented in IE10+.
+Detects support for the DOM Pointer Events API, which provides a unified event interface for pointing input devices, as implemented in IE10+, Edge and Blink.
 */
 
   // **Test name hijacked!**
@@ -9226,7 +9225,7 @@ Checks for support of the autoplay attribute of the video element.
     }
 
     elem.setAttribute('autoplay', '');
-    elem.style.cssText = 'display:none';
+    elemStyle.cssText = 'display:none';
     docElement.appendChild(elem);
     // wait for the next tick to add the listener, otherwise the element may
     // not have time to play in high load situations (e.g. the test suite)
@@ -9488,16 +9487,18 @@ Detect for the RTCDataChannel API that allows for transfer data directly from on
   "property": "getusermedia",
   "caniuse": "stream",
   "tags": ["webrtc"],
-  "authors": ["Eric Bidelman"],
+  "authors": ["Eric Bidelman", "Masataka Yakura"],
   "notes": [{
     "name": "W3C Media Capture and Streams spec",
-    "href": "https://www.w3.org/TR/mediacapture-streams/"
-  }],
-  "polyfills": ["getusermedia"]
+    "href": "http://w3c.github.io/mediacapture-main/#dom-mediadevices-getusermedia"
+  }]
 }
 !*/
+/* DOC
+Detects support for the new Promise-based `getUserMedia` API.
+*/
 
-  Modernizr.addTest('getusermedia', !!prefixed('getUserMedia', navigator));
+  Modernizr.addTest('getUserMedia', 'mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices);
 
 /*!
 {
