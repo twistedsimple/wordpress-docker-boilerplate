@@ -123,6 +123,10 @@
     "npm": "^5.10.0"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.24.7",
     "del": "^3.0.0",
     "gulp": "^3.6.0",
     "gulp-autoprefixer": "^4.1.0",
@@ -131,6 +135,7 @@
     "gulp-jshint": "^2.1.0",
     "gulp-livereload": "^3.8.1",
     "gulp-load-plugins": "^1.4.0",
+    "gulp-replace": "^1.0.0",
     "gulp-sass": "^3.2.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-template": "^5.0.0",

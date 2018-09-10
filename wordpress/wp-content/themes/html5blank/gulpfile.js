@@ -4,6 +4,7 @@
 
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
+var replace = require('gulp-replace');
 
 var gulp = require( "gulp" ),
 	/** @type {Object} Loader of Gulp plugins from `package.json` */
@@ -64,6 +65,9 @@ gulp.task( "copy", function() {
 	return gulp.src([
 			"src/*.{php,png,css}",
 			"src/modules/*.php",
+			"src/template-parts/**/*.php",
+			"src/PHPMailer/*.php",
+			"src/includes/*.php",
 			"src/img/**/*.{jpg,png,svg,gif,webp,ico}",
 			"src/fonts/*.{woff,woff2,ttf,otf,eot,svg}",
 			"src/languages/*.{po,mo,pot}"
@@ -86,6 +90,13 @@ gulp.task( "sass", function () {
 		.pipe( gulp.dest( "src/css" ) );
 });
 
+// /** Reassert Image URLs in CSS */
+// gulp.task( "imgurls", function() {
+// 	return gulp.src("src/css/style.css")
+// 		.pipe(replace('../img', './img'))
+// 		.pipe( gulp.dest( "src/css/prod/"));
+// })
+
 /** STYLES */
 gulp.task( "styles", [ "sass" ], function() {
 	console.log( "`styles` task run in `" + env + "` environment" );
@@ -94,7 +105,9 @@ gulp.task( "styles", [ "sass" ], function() {
 		.pipe( $.concat( "style.css" ));
 
 	if ( env === "production" ) {
-		stream = stream.pipe( $.csso() );
+		stream = stream.pipe( $.csso() )
+			.pipe(replace('../img', './img'))
+			.pipe(replace('../font', './font'));
 	}
 
 	return stream.on( "error", function( e ) {
@@ -114,14 +127,46 @@ gulp.task( "jshint", function () {
 
 /** Webpack */
 gulp.task('webpack', () => {
+	var options = {
+		output: {
+			filename: 'scripts.js',
+		},
+		module: {
+			rules: [
+				{
+					test: /\.js$/,
+					exclude: /node_modules/, 
+					loader: "babel-loader",
+					query: {
+						presets: 'env'
+					}
+				}
+			]
+		}
+	}
+
+	if(env !== "production") {
+		options.devtool = 'source-map'
+	}
 	gulp.src('./src/js/scripts.js')
-		.pipe(webpackStream({
-			output: {
-				filename: 'scripts.js',
-			},
-			devtool: 'source-map'
-		}))
+		.pipe(webpackStream(options))
 		.pipe(gulp.dest('./src/js/dist'));
+});
+
+/** Browser Sync */
+gulp.task("browser-sync", function() {
+
+    var files = [
+                    "**/*.css",
+                   // "**/*.php",
+                    "**/*.js",
+                    "**/*.{png,jpg,gif}"
+                ];
+
+    require('browser-sync').init(files, {
+        proxy: "localhost:8000",
+    });
+
 });
 
 /** Templates */
@@ -173,7 +218,7 @@ gulp.task( "envProduction", function() {
 });
 
 /** Livereload */
-gulp.task( "watch", [ "template", "styles", "jshint", "modernizr", "jquery", "normalize" ], function() {
+gulp.task( "watch", [ "template", "styles", "jshint", "modernizr", "jquery", "normalize", "browser-sync" ], function() {
 	var server = $.livereload;
 	server.listen();
 
@@ -194,7 +239,7 @@ gulp.task( "watch", [ "template", "styles", "jshint", "modernizr", "jquery", "no
 	], [ "styles" ] );
 
 	/** Watch for JSHint */
-	gulp.watch( "src/js/{!(lib)/*.js,*.js}", ["jshint", "webpack"] );
+	gulp.watch( "src/js/{!(lib)/*.js,!(dist)/*.js,*.js}", ["jshint", "webpack"] );
 });
 
 /** Build */
@@ -205,6 +250,7 @@ gulp.task( "build", [
 	"styles",
 	"modernizr",
 	"jshint",
+	"webpack",
 	"copy",
 	"uglify"
 ], function () {

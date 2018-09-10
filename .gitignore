@@ -1,2 +1,19 @@
-.DS_Store
+#Ignore
 **/node_modules/
+wordpress/*
+
+!wordpress/wp-content/
+wordpress/wp-content/*
+
+#Allow Plugins minus defaults
+!wordpress/wp-content/plugins
+wordpress/wp-content/plugins/akismet
+wordpress/wp-content/plugins/hello.php
+
+#Allow html5blank theme
+!wordpress/wp-content/themes
+wordpress/wp-content/themes/*
+!wordpress/wp-content/themes/html5blank
+
+#Ignore Filetypes
+.DS_Store
