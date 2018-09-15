@@ -17,3 +17,6 @@ wordpress/wp-content/themes/*
 
 #Ignore Filetypes
 .DS_Store
+
+#Allow gitignore-sample for later use
+!wordpress/.gitignore-sample

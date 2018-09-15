@@ -10,6 +10,7 @@
 * Run `npm` install in the html5blank directory
 * In the same directory run `gulp`
 * For production run `gulp build`. If you've previously done this, make sure to remove the "dist" folder first. To continue development locally, make sure to run `gulp` again or you'll receive 404 errors for scripts and stylesheets on the "src" build.
+* To reset git within the wordpress directory: remove the git repo, init a new repo in the `wordpress` folder, uncomment the `.gitignore-sample`
 
 ## Known limitations
 

@@ -1,0 +1,16 @@
+# Ignore All
+*
+
+# Reinclude wp-content files
+!.gitignore
+!wp-content
+!wp-content/*
+!wp-content/themes
+!wp-content/themes/*
+!wp-content/themes/*/*
+!wp-content/themes/*/*/*
+!wp-content/themes/*/*/*/*
+!wp-content/themes/*/*/*/*/*
+
+# Ignore node_modules folder
+**/node_modules/**
